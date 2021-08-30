@@ -1,12 +1,12 @@
 package com.example.demo.model;
 
 public class indicatorModel {
-    private final String buy_sell;
+    private final String signal;
     private final String name;
     private final double percentage;
 
-    public indicatorModel(String name, String buy_sell, double percentage){
-        this.buy_sell = buy_sell;
+    public indicatorModel(String name, String signal, double percentage){
+        this.signal = signal;
         this.percentage = percentage;
         this.name = name;
     }
@@ -15,8 +15,8 @@ public class indicatorModel {
         return percentage;
     }
 
-    public String getBuy_sell() {
-        return buy_sell;
+    public String getSignal() {
+        return signal;
     }
 
     public String getName() {
