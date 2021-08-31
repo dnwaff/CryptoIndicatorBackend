@@ -21,6 +21,10 @@ public class buyIndicatorController {
         this.service = service;
         this.csvService = csvService;
     }
+    @GetMapping("api/v1/signal/random/{ticker}")
+    public indicatorModel getRandomBuyIndicator(@PathVariable(value="ticker") String ticker){
+        return this.service.getRandomIndicator(ticker);
+    }
     @GetMapping("api/v1/signal/{ticker}")
     public indicatorModel getBuyIndicator(@PathVariable(value="ticker") String ticker){
         return this.service.getIndicator(ticker);
