@@ -11,9 +11,9 @@ import java.io.IOException;
 public class indicatorService {
     public indicatorService(){}
 
-    public indicatorModel getIndicator(String ticker, String endpoint){
+    public indicatorModel getIndicator(String ticker){
         try {
-            Document doc = Jsoup.connect(String.format("https://www.barchart.com/crypto/quotes/%s5E%s/opinion","%",endpoint))
+            Document doc = Jsoup.connect(String.format("https://www.barchart.com/crypto/quotes/%s5E%s/opinion","%",ticker))
                     .header("User-Agent","Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0")
                     .get();
 
