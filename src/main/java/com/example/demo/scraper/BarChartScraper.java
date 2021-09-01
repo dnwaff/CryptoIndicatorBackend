@@ -6,7 +6,7 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 
-public class BarChartScraper {
+public class BarChartScraper implements ScraperInt {
     private String ticker;
     public BarChartScraper(String ticker){ this.ticker = ticker;}
 
@@ -27,7 +27,7 @@ public class BarChartScraper {
 
             return new indicatorModel(this.ticker,signal,percent);
         }
-        catch (IOException e){
+        catch (Exception e){
             e.printStackTrace();
             return null;
         }

@@ -15,7 +15,7 @@ public class CsvService {
     public CsvService(){
         String fileName = "src/main/java/misc/BarChartTickers.csv";
         try(FileReader reader = new FileReader(fileName)) {
-           this.tickers = new CsvToBeanBuilder(reader)
+           this.tickers = new CsvToBeanBuilder<tickerModel>(reader)
                     .withType(tickerModel.class)
                     .build()
                     .parse();
